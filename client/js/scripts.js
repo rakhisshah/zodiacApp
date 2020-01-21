@@ -17,21 +17,20 @@ var zodiacs=[
 {
 	name: "Cancer",
 	month: "June 21-Juyy 22",
-	description: "Cancer (♋️) is the fourth astrological sign in the Zodiac, originating from the constellation of Cancer. It spans from 90° to 120° celestial longitude. ... In astrology, Cancer is the cardinal sign of the Water trigon, which is made up of Cancer, Pisces, and Scorpio. It is one of the six negative signs."
+	description: "Cancer is the fourth astrological sign in the Zodiac, originating from the constellation of Cancer. It spans from 90° to 120° celestial longitude. ... In astrology, Cancer is the cardinal sign of the Water trigon, which is made up of Cancer, Pisces, and Scorpio. It is one of the six negative signs."
 
 },
 {
 	name: "Leo",
 	month: "July23-August 22",
-	description: "Leo (♌) (Greek: Λέων, Leōn), is the fifth astrological sign of the zodiac. ... Under the tropical zodiac, the Sun transits this area on average between July 23 and August 22 each year, and under the sidereal zodiac, the Sun currently transits this area from approximately August 16 to September 15."
+	description: "Leo (Greek: Λέων, Leōn), is the fifth astrological sign of the zodiac. ... Under the tropical zodiac, the Sun transits this area on average between July 23 and August 22 each year, and under the sidereal zodiac, the Sun currently transits this area from approximately August 16 to September 15."
 },
 
 
 {
 	name: "Virgo",
 	month: "August 23-September 22",
-	description: "Virgo (♍) (Greek: Παρθένος, Parthenos) is the sixth astrological sign in the Zodiac. ... Under the tropical zodiac, the Sun transits this area on average between August 23 and September 22, and the Sun transits the constellation of Virgo from approximately September 16 to October 30.
-	Zodiac element: Earth"
+	description: "Virgo  (Greek: Παρθένος, Parthenos) is the sixth astrological sign in the Zodiac. ... Under the tropical zodiac, the Sun transits this area on average between August 23 and September 22, and the Sun transits the constellation of Virgo from approximately September 16 to October 30"
 },
 {
 	name: "Libra",
@@ -46,12 +45,12 @@ var zodiacs=[
 {
 	name: "Sagittarius",
 	month: "November 23- Deccember 21",
-	description: "These zodiac "cuspers" are bold, passionan of you were born between Nov. 18 and 24, you fall in the Scorpio-Sagittarius cusp, also called the Cusp of Revolution. You are known as a Scorpio-Sagittarius cusper. If you have any planet on the cusp, you show traits of both zodiac signs."
+	description: "These zodiac cuspers are bold, passionan of you were born between Nov. 18 and 24, you fall in the Scorpio-Sagittarius cusp, also called the Cusp of Revolution. You are known as a Scorpio-Sagittarius cusper. If you have any planet on the cusp, you show traits of both zodiac signs."
 },
 {
 	name: "Capricorn",
-	month: "Deccember 22- January 21"
-	description: "Scorpio and Capricorn share a special sexual bond as signs in sextile with each other and .... Scorpio woman - information and insights on the Scorpio woman."
+	month: "Deccember 22- January 21",
+	description: "Scorpio and Capricorn share a special sexual bond as signs in sextile with each other and  Scorpio woman information and insights on the Scorpio woman."
 },
 {
 	name: "Aquarius",
@@ -64,3 +63,23 @@ var zodiacs=[
 	description: "Pisces is a sensitive water sign, ruled by the planet Neptune. Your sign is fluid and tends to be sympathetic to the underdog. It's so easy for you to feel other people's experiences that they can obscure your own. You can be vague and escapist, but make up for it by being compassionate and intuitive"
 }
 ]
+
+function getData()
+{
+	var userSearch=document.getElementById('user-search').value.toLowerCase();
+	
+	for (var i =0; i <zodiacs.length; i++)
+	 {
+
+		if(userSearch==zodiacs[i].name.toLowerCase())
+		{
+			document.getElementById('name').innerHTML=zodiacs[i].name;
+			document.getElementById('date').innerHTML=zodiacs[i].month;
+			document.getElementById('text-result').innerHTML=zodiacs[i].description;
+		}
+	}
+
+
+
+
+}
